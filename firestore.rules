@@ -1,0 +1,61 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isValidId(id) { 
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); 
+    }
+    function isSignedIn() { 
+      return request.auth != null; 
+    }
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    function incoming() {
+      return request.resource.data;
+    }
+    function existing() {
+      return resource.data;
+    }
+
+    // Module validation
+    function isValidModule(data) {
+      return data.title is string && data.title.size() > 0 && data.title.size() <= 200 &&
+             data.description is string && data.description.size() <= 1000 &&
+             data.order is number &&
+             (!('videoUrl' in data) || (data.videoUrl is string && data.videoUrl.size() <= 500)) &&
+             data.content is string && data.content.size() <= 10000 &&
+             data.category is string && data.category.size() <= 100;
+    }
+
+    // User validation
+    function isValidUser(data) {
+      return data.username is string && data.username.size() >= 3 && data.username.size() <= 50 &&
+             data.completedModules is list &&
+             data.createdAt is string; // Simplified for simplicity, ideally timestamp
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Modules: Publicly readable for authenticated users (training center)
+    match /modules/{moduleId} {
+      allow read: if isSignedIn();
+      allow write: if false; // Only admin (manual) via console
+    }
+
+    // Users: Private profile
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create: if isOwner(userId) && isValidUser(incoming());
+      allow update: if isOwner(userId) && 
+                    isValidUser(incoming()) && 
+                    incoming().diff(existing()).affectedKeys().hasOnly(['completedModules', 'username']);
+      allow delete: if false;
+    }
+  }
+}
