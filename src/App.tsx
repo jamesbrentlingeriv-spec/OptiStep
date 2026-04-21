@@ -25,23 +25,23 @@ function AppRoutes() {
   }
 
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/library" element={<Dashboard />} /> {/* Same for now, can be expanded */}
-          <Route path="/module/:id" element={<ModulePage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/library" element={<Dashboard />} /> {/* Same for now, can be expanded */}
+        <Route path="/module/:id" element={<ModulePage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Layout>
   );
 }
 
 export default function App() {
   return (
     <AuthProvider>
-      <AppRoutes />
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <AppRoutes />
+      </BrowserRouter>
     </AuthProvider>
   );
 }
