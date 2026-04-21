@@ -6,9 +6,26 @@ import './index.css';
 // Register Service Worker for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(err => {
-      console.log('SW registration failed: ', err);
-    });
+    const swUrl = `${import.meta.env.BASE_URL}sw.js`;
+    
+    // Check if service worker exists before registering
+    fetch(swUrl)
+      .then(response => {
+        if (response.ok) {
+          navigator.serviceWorker.register(swUrl)
+            .then(registration => {
+              console.log('SW registered:', registration);
+            })
+            .catch(err => {
+              console.log('SW registration failed:', err);
+            });
+        } else {
+          console.log('Service worker not found at:', swUrl);
+        }
+      })
+      .catch(err => {
+        console.log('SW check failed:', err);
+      });
   });
 }
 

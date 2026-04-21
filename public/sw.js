@@ -1,12 +1,12 @@
-const CACHE_NAME = 'optistep-v1';
+const CACHE_NAME = 'optistep-v2';
+const BASE_PATH = '/OptiStep/';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/src/main.tsx',
-  '/site.webmanifest',
-  '/favicon.ico',
-  '/android-chrome-192x192.png',
-  '/android-chrome-512x512.png'
+  BASE_PATH,
+  BASE_PATH + 'index.html',
+  BASE_PATH + 'site.webmanifest',
+  BASE_PATH + 'favicon.ico',
+  BASE_PATH + 'android-chrome-192x192.png',
+  BASE_PATH + 'android-chrome-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {
