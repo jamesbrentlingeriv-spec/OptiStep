@@ -39,7 +39,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>
     </AuthProvider>

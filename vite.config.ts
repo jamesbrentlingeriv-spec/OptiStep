@@ -6,8 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    // Set base path for GitHub Pages (change '/OptiStep/' to your repo name)
-    base: mode === 'production' ? '/OptiStep/' : '/',
+    // No base path needed for Vercel (use '/' for root deployment)
+    base: '/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),

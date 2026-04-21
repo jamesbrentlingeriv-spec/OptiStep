@@ -6,7 +6,7 @@ import './index.css';
 // Register Service Worker for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    const swUrl = `${import.meta.env.BASE_URL}sw.js`;
+    const swUrl = '/sw.js';
     
     // Check if service worker exists before registering
     fetch(swUrl)
