@@ -149,34 +149,92 @@ export const INITIAL_MODULES: Module[] = [
         id: 'lt1',
         title: 'Single Vision (SV)',
         content: 'Single Vision lenses have the same optical power throughout the entire lens. They are used to correct a single focus—either distance, intermediate, or near vision. They are the most common lens type for younger patients or those who only need correction for reading or driving.',
-        imageUrl: '/slideimages/lens design/lens1.jpg'
+        imageUrl: '/slideimages/lens%20design/lens1.jpg'
       },
       {
         id: 'lt2',
         title: 'Lined Bifocals & Trifocals',
         content: 'Bifocals (typically Flat Top 28 or 35) have two distinct powers separated by a visible line. The top is for distance and the "segment" is for near. Trifocals add a third intermediate segment for computer-distance vision. While less popular than progressives, they offer the widest, most stable reading area for certain vocational tasks.',
-        imageUrl: '/slideimages/lens design/lens2.png'
+        imageUrl: '/slideimages/lens%20design/lens2.png'
       },
       {
         id: 'lt3',
         title: 'Standard Progressives (PAL)',
         content: 'Progressive Addition Lenses (PALs) offer a seamless transition from distance to intermediate to near. "Standard" progressives are semi-finished blanks where the front surface carries the addition. They have a fixed corridor width and can have significant "peripheral swim" or blur on the sides, requiring the patient to point their nose at what they want to see.',
-        imageUrl: '/slideimages/lens design/lens3.png'
+        imageUrl: '/slideimages/lens%20design/lens3.png'
       },
       {
         id: 'lt4',
         title: 'Digital & Free-Form Progressives',
         content: 'Digital progressives are surfaced on the back of the lens using computer-controlled diamond-point tools. This "Free-Form" technology allows for a customized design based on the patient\'s Rx, frame measurements (wrap, tilt, vertex), and even wearer habits. These lenses offer much wider corridors and significantly reduced peripheral distortion compared to standard PALs.',
-        imageUrl: '/slideimages/lens design/lens4.png'
+        imageUrl: '/slideimages/lens%20design/lens4.png'
       },
       {
         id: 'lt5',
         title: 'Near Variable Focus (Office Lenses)',
         content: 'Also known as Computer or Workspace lenses, these are progressives optimized for intermediate and near distance. They lack a true distance area but provide an extremely wide field of view for desktop monitors and desk work. They are perfect for presbyopes who spend 8+ hours a day on a computer and find standard progressives too narrow.',
-        imageUrl: '/slideimages/lens design/lens5.png'
+        imageUrl: '/slideimages/lens%20design/lens5.png'
       }
     ],
-    quiz: { questions: generateMockQuestions(5, 'Lens Types') }
+    quiz: { 
+      questions: [
+        {
+          id: 'lt-q1',
+          text: 'A patient requires a lens that provides clear vision at distance and near, but they specifically want to avoid the "image jump" caused by a visible segment line. Which lens is the most appropriate choice?',
+          options: [
+            'Lined Bifocal',
+            'Lined Trifocal',
+            'Progressive Addition Lens (PAL)',
+            'Single Vision'
+          ],
+          correctAnswerIndex: 2
+        },
+        {
+          id: 'lt-q2',
+          text: 'Which lens design features three distinct focal points—typically set for distance, intermediate (arm\'s length), and near—separated by two visible horizontal lines?',
+          options: [
+            'Near Variable Focus',
+            'Lined Trifocal',
+            'Single Vision',
+            'Progressive'
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'lt-q3',
+          text: 'A "Near Variable Focus" lens (often called an "Occupational" or "Office" lens) is primarily designed to provide a wider field of view for which two zones?',
+          options: [
+            'Distance and Driving',
+            'Distance and Near',
+            'Intermediate and Near',
+            'Distance and Intermediate'
+          ],
+          correctAnswerIndex: 2
+        },
+        {
+          id: 'lt-q4',
+          text: 'A patient with no presbyopia (the age-related loss of near focusing) needs a correction only for nearsightedness to see the chalkboard at school. What type of lens will they be prescribed?',
+          options: [
+            'Single Vision',
+            'Lined Bifocal',
+            'Progressive',
+            'Near Variable Focus'
+          ],
+          correctAnswerIndex: 0
+        },
+        {
+          id: 'lt-q5',
+          text: 'In a Lined Bifocal lens, the top portion of the lens is used for distance vision. What is the lower, "D-shaped" or round segment used for?',
+          options: [
+            'Intermediate vision (Computer)',
+            'Peripheral vision',
+            'Near vision (Reading)',
+            'Blue light filtering'
+          ],
+          correctAnswerIndex: 2
+        }
+      ] 
+    }
   },
   {
     id: 'lifestyle-consult',
