@@ -112,19 +112,41 @@ export default function ModulePage() {
                 className="space-y-4 lg:space-y-8"
               >
                 <div className="bg-surface-panel rounded-[24px] lg:rounded-[32px] border border-line overflow-hidden shadow-2xl">
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={module.slides[currentSlideIndex].imageUrl} 
-                      alt={module.slides[currentSlideIndex].title}
-                      className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
-                    />
+                  <div className="aspect-video relative overflow-hidden bg-black">
+                    {module.slides[currentSlideIndex].videoUrl ? (
+                      module.slides[currentSlideIndex].videoUrl.endsWith('.gif') ? (
+                        <img 
+                          src={module.slides[currentSlideIndex].videoUrl} 
+                          alt={module.slides[currentSlideIndex].title}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <video 
+                          controls 
+                          autoPlay
+                          loop
+                          className="w-full h-full object-contain"
+                          preload="metadata"
+                        >
+                          <source src={module.slides[currentSlideIndex].videoUrl} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      )
+                    ) : (
+                      <img 
+                        src={module.slides[currentSlideIndex].imageUrl} 
+                        alt={module.slides[currentSlideIndex].title}
+                        className="w-full h-full object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    )}
                   </div>
                   <div className="p-6 lg:p-10 space-y-3 lg:space-y-4">
                     <h2 className="text-xl lg:text-2xl font-bold text-text-primary">{module.slides[currentSlideIndex].title}</h2>
-                    <p className="text-sm lg:text-lg text-text-muted leading-relaxed font-medium">
-                      {module.slides[currentSlideIndex].content}
-                    </p>
+                    <p 
+                      className="text-sm lg:text-lg text-text-muted leading-relaxed font-medium"
+                      dangerouslySetInnerHTML={{ __html: module.slides[currentSlideIndex].content }}
+                    />
                     <div className="pt-4 lg:pt-6 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4">
                       <div className="flex gap-4 items-center w-full sm:w-auto justify-between sm:justify-start">
                         <button 

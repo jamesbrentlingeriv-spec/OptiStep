@@ -527,143 +527,136 @@ export const INITIAL_MODULES: Module[] = [
         title: "Introduction to KY MCOs",
         content:
           "Kentucky Medicaid operates through several Managed Care Organizations (MCOs). Our office specifically focuses on Wellcare, Aetna, Humana Healthy Horizons, and Traditional State Medicaid. Each has a specific portal and set of rules.",
-        imageUrl: "/slideimages/medicaid/intro_mco.jpg",
+        imageUrl: "/slideimages/medicaid/km1.png",
+      },
+      {
+        id: "km-14",
+        title: "KYMMIS: The State Truth",
+        content:
+          '<span style="color: #FFD700; font-weight: bold;">ATTENTION! PLEASE WATCH THE SLIDESHOW ABOVE. IT WILL SHOW YOU HOW TO PULL KY STATE MEDICAID!</span><br/><br/>Even if a patient has an MCO, you must pull the KY State (KYMMIS) page. Eligibility is determined by the state; if they do not pull up as active here, the MCO will not pay. For patients without an MCO, this is the only page needed. Verify eligibility using their Medicaid ID or their SS# and DOB.',
+        videoUrl: "/slidevideos/kentucky.gif",
       },
       {
         id: "km-2",
         title: "Initial Intake: The Card Check",
         content:
           "Always ask for the physical or digital Medicaid card. Look for the logos. Wellcare and Aetna will go to Avesis; Humana goes to EyeQuest; no logo goes to HealthNet. Checking this first saves 10 minutes of searching the wrong portal.",
-        imageUrl: "/slideimages/medicaid/card_check.jpg",
+        imageUrl: "/slideimages/medicaid/km2.png",
       },
       {
         id: "km-3",
         title: "Avesis: Logging In",
         content:
           'Access the Avesis Provider Portal using our registered credentials. This single login covers both Wellcare and Aetna. Ensure you are on the "Provider" side of the site, not the "Member" side.',
-        imageUrl: "/slideimages/medicaid/avesis_login.jpg",
+        imageUrl: "/slideimages/medicaid/km3.png",
       },
       {
         id: "km-4",
         title: "Avesis: The Initial Search",
         content:
-          "You can search by the 10-digit Medicaid ID number. If the ID is unavailable or not working, switch to searching by the patient’s full legal name and their Date of Birth (DOB).",
-        imageUrl: "/slideimages/medicaid/avesis_search.jpg",
+          "You can search by the 10-digit Medicaid ID number. If the ID is unavailable or not working, switch to searching by the patient's full legal name and their Date of Birth (DOB).",
+        imageUrl: "/slideimages/medicaid/km4.png",
       },
       {
         id: "km-5",
         title: "Avesis: Member Selection",
         content:
-          "Once the results appear, verify the identity. Click directly on the Patient’s Name to enter their specific benefit dashboard. If multiple names appear, use the address to confirm the correct person.",
-        imageUrl: "/slideimages/medicaid/avesis_select.jpg",
+          "Once the results appear, verify the identity. Click directly on the View Details button to enter their specific benefit dashboard. If multiple names appear, use the address to confirm the correct person.",
+        imageUrl: "/slideimages/medicaid/km5.png",
       },
       {
         id: "km-6",
-        title: "Avesis: The Accumulators Tab",
+        title: "Avesis: Checking Accumulators & Usage",
         content:
-          'Once inside the member file, look for the tab labeled "Accumulators." This is the only place to see live, real-time data on what the patient has used versus what is still available.',
-        imageUrl: "/slideimages/medicaid/avesis_accumulators.jpg",
+          'Once inside the member file, look for the tab labeled "Accumulators." This is the only place to see live, real-time data on what the patient has used versus what is still available. On the Accumulators screen, find the row for "Vision" and click the button that says "Usage." This will trigger a pop-up or a new section showing the specific dates and items used.',
+        imageUrl: "/slideimages/medicaid/km6.png",
       },
       {
         id: "km-7",
-        title: "Avesis: Vision Usage Button",
-        content:
-          'On the Accumulators screen, find the row for "Vision." Click the button that says "Usage." This will trigger a pop-up or a new section showing the specific dates and items used.',
-        imageUrl: "/slideimages/medicaid/avesis_usage.jpg",
-      },
-      {
-        id: "km-8",
         title: 'Avesis: The "Remaining" Column',
         content:
           'Look at the "Remaining" column. If it shows "1," the patient is eligible for a pair of glasses. If it shows "0," the patient has already utilized their standard benefit for this period.',
-        imageUrl: "/slideimages/medicaid/avesis_remaining.jpg",
+        imageUrl: "/slideimages/medicaid/km7.png",
       },
       {
-        id: "km-9",
+        id: "km-8",
         title: "Avesis: Prior Auth Requirements",
         content:
           "If usage is 0, you can still process an order, but it must be a Prior Authorization (PA). Inform the patient that PAs take a week or longer to process and require a specific medical justification.",
-        imageUrl: "/slideimages/medicaid/avesis_pa.jpg",
+        imageUrl: "/slideimages/medicaid/km8.png",
       },
       {
-        id: "km-10",
+        id: "km-9",
         title: "Humana: Entering the EyeQuest Portal",
         content:
           'For Humana Healthy Horizons, go to the EyeQuest website (note: the URL actually says "DentaQuest"). Log in with our credentials. Once logged in, click on "Eligibility" located on the right side of the screen. This will open the main Eligibility Search page.',
-        imageUrl: "/slideimages/medicaid/eyequest_entry.jpg",
+        imageUrl: "/slideimages/medicaid/km9.png",
       },
       {
-        id: "km-11",
+        id: "km-10",
         title: "Humana: Eligibility Search",
         content:
           "Input the Humana Member ID and the Date of Birth. If the Humana ID isn't working, use the KY Medicaid ID. Ensure the name spelling matches the state record exactly.",
         imageUrl: "/slideimages/medicaid/eyequest_search.jpg",
       },
       {
-        id: "km-12",
+        id: "km-11",
         title: "Humana: Navigating the Claim Form",
         content:
           'Once you click on the patient’s coverage on the Eligibility Search page, it pulls up a claim form. Disregard everything on this form except for the four checkmark boxes at the top. Ensure the "Frame" and "Lens" boxes are NOT greyed out. If they are greyed out, the patient has no hardware benefits available.',
         imageUrl: "/slideimages/medicaid/eyequest_claim_form.jpg",
       },
       {
-        id: "km-13",
+        id: "km-12",
         title: "Humana: Secondary & Replacement Benefits",
         content:
           'If the patient has used up their first pair already, look for the dropdown box on the top right of the page that says "Primary Benefit." Check for "Secondary Benefit" or "Replacement Eyewear." Selecting this will often ungrey the frame and lens boxes, making the patient eligible for a second pair.',
         imageUrl: "/slideimages/medicaid/eyequest_dropdown.jpg",
       },
       {
-        id: "km-14",
-        title: "KYMMIS: The State Truth",
-        content:
-          "Even if a patient has an MCO, you must pull the KY State (KYMMIS) page. Eligibility is determined by the state; if they do not pull up as active here, the MCO will not pay. For patients without an MCO, this is the only page needed. Verify eligibility using their Medicaid ID or their SS# and DOB.",
-        imageUrl: "/slideimages/medicaid/kymmis_search.jpg",
-      },
-      {
-        id: "km-15",
+        id: "km-13",
         title: "Frequency Rules: January 1st Rollover",
         content:
           "All KY Medicaid users, whether MCO or Traditional, have their benefits roll over on January 1st. They are not restricted by rolling months. Theoretically, a patient could get a second pair for the year on December 30th and be eligible for another on January 1st.",
         imageUrl: "/slideimages/medicaid/jan_rollover.jpg",
       },
       {
-        id: "km-16",
+        id: "km-14",
         title: "Medicaid Frame Selection & Humana Restrictions",
         content:
           "We offer a wide selection of frames including Modern, Smilen, Gotham, and Broadway. However, Humana is stricter; they only accept frames from their specific list. This includes almost every Modern frame on the backwall, but NONE of the Smilen, Gotham, or Broadway styles. If a Humana patient buys a frame not on the list or brings their own, they must pay a $9.54 mail fee as we have to ship the frame to insurance at our cost.",
         imageUrl: "/slideimages/medicaid/frame_types.jpg",
       },
       {
-        id: "km-17",
+        id: "km-15",
         title: "Office Layout: Locating Frames",
         content:
           "The Medicaid frames are located on the very back wall cases. Additionally, you can find them on the last shelf on the left side, right next to the door that leads to the back office.",
         imageUrl: "/slideimages/medicaid/office_layout.jpg",
       },
       {
-        id: "km-18",
+        id: "km-16",
         title: "Medicaid Lens Upgrades & Prior Auths",
         content:
           "Most upgrades are possible with Medicaid at no additional cost to the patient, but only for MCO Medicaid (not Traditional State). Upgrades like high-index, AR coating, and Transitions require a Prior Auth—Transitions specifically requires a strict photophobia diagnosis (e.g., Aniridia). Humana differs: if the RX is ±8.00 or stronger, high-index and AR are covered automatically without a Prior Auth.",
         imageUrl: "/slideimages/medicaid/lens_rules.jpg",
       },
       {
-        id: "km-19",
+        id: "km-17",
         title: "The Out-of-Pocket Discussion",
         content:
           'Medicaid will NOT pay any portion toward frames outside of the specific selection mentioned previously (Modern/Smilen/Gotham/Broadway). If a patient chooses a different frame, they must pay the full retail amount. Always have the patient sign a "Member Responsibility" waiver before proceeding with private-pay components.',
         imageUrl: "/slideimages/medicaid/oop_talk.jpg",
       },
       {
-        id: "km-20",
+        id: "km-18",
         title: "ID Verification & Documentation",
         content:
           "Before finalizing any order, double check to make sure we have the correct Medicaid ID in the patient file. In the case of Humana, ensure we have the specific Humana ID recorded as well. It is preferred that we keep a clear scan or photocopy of the insurance card in their file to prevent billing errors.",
         imageUrl: "/slideimages/medicaid/id_check.jpg",
       },
       {
-        id: "km-21",
+        id: "km-19",
         title: "Final Summary Checklist",
         content:
           "1. Verify State eligibility via KYMMIS. 2. Login to correct MCO portal. 3. Check Accumulators/Usage. 4. Confirm Frame/Lens boxes aren't greyed out. 5. Guide patient to the back wall for frames. 6. Verify and save IDs and card copies.",
@@ -873,7 +866,7 @@ export const INITIAL_MODULES: Module[] = [
         },
         {
           id: "kmc-q20",
-          text: "What is the preferred documentation to have in a patient’s file to ensure billing accuracy?",
+          text: "What is the preferred documentation to have in a patient's file to ensure billing accuracy?",
           options: [
             "A handwritten note",
             "A copy of their Medicaid insurance card",
@@ -900,35 +893,35 @@ export const INITIAL_MODULES: Module[] = [
         title: "Anatomy of a Frame Fit: Horizontal Centering",
         content:
           "With horizontal centering, you want it to be as centered as possible—the pupil to the middle of the frame. The closer it is to the center, the less amount of decentration there is, and the less amount of decentration means that the lens is going to be thinner, especially for the higher powers.",
-        imageUrl: "https://picsum.photos/seed/frames1/1200/800",
+        imageUrl: "/slideimages/framefit/ff1.jpg",
       },
       {
         id: "ff2",
         title: "Vertical Position & Progressives",
         content:
           "Vertically, follow the 70/30 rule: 30% of the lens height should be above the pupils and 70% below. This is especially important for bifocals and progressives. For progressives, ensure there is at least 10-12mm of lens room above the pupil and 14-18mm below (depending on the seg height) to ensure the full reading area fits within the frame. Selecting a frame that is too shallow vertically will cut off the patient's reading zone.",
-        imageUrl: "https://picsum.photos/seed/frames2/1200/800",
+        imageUrl: "/slideimages/framefit/ff2.jpg",
       },
       {
         id: "ff3",
         title: "Bridge Fit: Plastic vs. Metal",
         content:
           'The bridge provides stability. For plastic frames, look for complete contact between the frame bridge and the bridge of the nose. For metal frames, ensure nose pads sit flat and are angled correctly. A bridge that is too narrow will sit high and "pinch," while one that is too wide will slide down and rest on the patient\'s cheeks.',
-        imageUrl: "https://picsum.photos/seed/frames3/1200/800",
+        imageUrl: "/slideimages/framefit/ff3.jpg",
       },
       {
         id: "ff4",
         title: "Temple Length & Ear Placement",
         content:
           "The temple should travel straight back to the ear before beginning its downward bend. The bend should occur directly over the root of the temple (where the ear meets the head). If the bend starts too early, it pushes the frame away from the face. Temples should not exert heavy pressure on the mastoid process behind the ear.",
-        imageUrl: "https://picsum.photos/seed/frames4/1200/800",
+        imageUrl: "/slideimages/framefit/ff4.jpg",
       },
       {
         id: "ff5",
         title: "Width and Face Form",
         content:
           "The frame should be approximately as wide as the widest part of the face (the cheekbones). If the temples bow out, the frame is too narrow. If there is more than a finger's width between the temple and the head, it's too wide. The temples should be straight back from the face of the glasses—you don't want them to be super curved in or super bowed out. Either one of those means the frame does not fit well. Adjusting Face Form (wrap) can fine-tune the fit and clear peripheral vision.",
-        imageUrl: "https://picsum.photos/seed/frames5/1200/800",
+        imageUrl: "/slideimages/framefit/ff5.png",
       },
     ],
     quiz: { questions: generateMockQuestions(5, "Frame Fitting") },

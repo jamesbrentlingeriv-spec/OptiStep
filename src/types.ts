@@ -2,7 +2,8 @@ export interface Slide {
   id: string;
   title: string;
   content: string;
-  imageUrl: string;
+  imageUrl?: string;
+  videoUrl?: string;
 }
 
 export interface Question {
