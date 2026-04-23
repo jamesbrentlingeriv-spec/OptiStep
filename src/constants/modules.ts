@@ -515,10 +515,10 @@ export const INITIAL_MODULES: Module[] = [
     id: "ky-medicaid-comprehensive",
     title: "Kentucky Medicaid: Expert Level Verification",
     description:
-      "A 21-slide masterclass in navigating Avesis, EyeQuest, and HealthNet for Kentucky MCOs.",
+      "A 19-slide masterclass in navigating Avesis, EyeQuest, and HealthNet for Kentucky MCOs.",
     content:
       "Advanced administrative workflows for verifying eligibility, checking usage, and managing prior authorizations.",
-    videoUrl: "/slidevideos/medicaid_mastery.mp4",
+    videoUrl: "/slidevideos/medicaid.mp4",
     order: 5,
     category: "Administrative",
     slides: [
@@ -661,13 +661,6 @@ export const INITIAL_MODULES: Module[] = [
         content:
           "1. Verify State eligibility via KYMMIS. 2. Login to correct MCO portal. 3. Check Accumulators/Usage. 4. Confirm Frame/Lens boxes aren't greyed out. 5. Guide patient to the back wall for frames. 6. Verify and save IDs and card copies.",
         imageUrl: "/slideimages/medicaid/km19.jpg",
-      },
-      {
-        id: "km-20",
-        title: "Kentucky Medicaid Training Video",
-        content:
-          '<span style="color: #FFD700; font-weight: bold;">COMPREHENSIVE MEDICAID TRAINING VIDEO</span><br/><br/>Watch this complete training video covering all aspects of Kentucky Medicaid verification, Avesis portal navigation, EyeQuest workflows, and best practices for processing Medicaid orders.',
-        videoUrl: "/slidevideos/medicaid.mp4",
       },
     ],
     quiz: {
@@ -1171,6 +1164,6 @@ export const INITIAL_MODULES: Module[] = [
         imageUrl: "https://picsum.photos/seed/anatomy5/1200/800",
       },
     ],
-    quiz: { questions: generateMockQuestions(5, "Anatomy") },
+    quiz: { questions: generateMockQuestions(5, "Eye Anatomy") },
   },
 ];
