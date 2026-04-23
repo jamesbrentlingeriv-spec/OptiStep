@@ -597,42 +597,42 @@ export const INITIAL_MODULES: Module[] = [
         title: "Humana: Eligibility Search",
         content:
           "Input the Humana Member ID and the Date of Birth. If the Humana ID isn't working, use the KY Medicaid ID. Ensure the name spelling matches the state record exactly.",
-        imageUrl: "/slideimages/medicaid/eyequest_search.jpg",
+        imageUrl: "/slideimages/medicaid/km10.png",
       },
       {
         id: "km-11",
         title: "Humana: Navigating the Claim Form",
         content:
           'Once you click on the patient’s coverage on the Eligibility Search page, it pulls up a claim form. Disregard everything on this form except for the four checkmark boxes at the top. Ensure the "Frame" and "Lens" boxes are NOT greyed out. If they are greyed out, the patient has no hardware benefits available.',
-        imageUrl: "/slideimages/medicaid/eyequest_claim_form.jpg",
+        imageUrl: "/slideimages/medicaid/km11.png",
       },
       {
         id: "km-12",
         title: "Humana: Secondary & Replacement Benefits",
         content:
           'If the patient has used up their first pair already, look for the dropdown box on the top right of the page that says "Primary Benefit." Check for "Secondary Benefit" or "Replacement Eyewear." Selecting this will often ungrey the frame and lens boxes, making the patient eligible for a second pair.',
-        imageUrl: "/slideimages/medicaid/eyequest_dropdown.jpg",
+        imageUrl: "/slideimages/medicaid/km12.png",
       },
       {
         id: "km-13",
         title: "Frequency Rules: January 1st Rollover",
         content:
           "All KY Medicaid users, whether MCO or Traditional, have their benefits roll over on January 1st. They are not restricted by rolling months. Theoretically, a patient could get a second pair for the year on December 30th and be eligible for another on January 1st.",
-        imageUrl: "/slideimages/medicaid/jan_rollover.jpg",
+        imageUrl: "/slideimages/medicaid/km13.jpg",
       },
       {
         id: "km-14",
         title: "Medicaid Frame Selection & Humana Restrictions",
         content:
           "We offer a wide selection of frames including Modern, Smilen, Gotham, and Broadway. However, Humana is stricter; they only accept frames from their specific list. This includes almost every Modern frame on the backwall, but NONE of the Smilen, Gotham, or Broadway styles. If a Humana patient buys a frame not on the list or brings their own, they must pay a $9.54 mail fee as we have to ship the frame to insurance at our cost.",
-        imageUrl: "/slideimages/medicaid/frame_types.jpg",
+        imageUrl: "/slideimages/medicaid/km14.png",
       },
       {
         id: "km-15",
         title: "Office Layout: Locating Frames",
         content:
           "The Medicaid frames are located on the very back wall cases. Additionally, you can find them on the last shelf on the left side, right next to the door that leads to the back office.",
-        imageUrl: "/slideimages/medicaid/office_layout.jpg",
+        imageUrl: "/slideimages/medicaid/km14.png",
       },
       {
         id: "km-16",
