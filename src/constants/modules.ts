@@ -899,14 +899,14 @@ export const INITIAL_MODULES: Module[] = [
         id: "ff1",
         title: "Anatomy of a Frame Fit: Horizontal Centering",
         content:
-          "The most critical factor is the relationship between the frame and the pupils. The pupils should be horizontally centered within the lens area or slightly nasal. A common rule is the 70/30 rule: the pupil should sit in the inner 70% of the lens width. Proper centering reduces the amount of decentration required, resulting in a thinner and lighter lens.",
+          "With horizontal centering, you want it to be as centered as possible—the pupil to the middle of the frame. The closer it is to the center, the less amount of decentration there is, and the less amount of decentration means that the lens is going to be thinner, especially for the higher powers.",
         imageUrl: "https://picsum.photos/seed/frames1/1200/800",
       },
       {
         id: "ff2",
         title: "Vertical Position & Progressives",
         content:
-          "Vertically, the pupil should sit in the upper 1/3 of the lens. For progressives, ensure there is at least 10-12mm of lens room above the pupil and 14-18mm below (depending on the seg height) to ensure the full reading area fits within the frame. Selecting a frame that is too shallow vertically will cut off the patient's reading zone.",
+          "Vertically, follow the 70/30 rule: 30% of the lens height should be above the pupils and 70% below. This is especially important for bifocals and progressives. For progressives, ensure there is at least 10-12mm of lens room above the pupil and 14-18mm below (depending on the seg height) to ensure the full reading area fits within the frame. Selecting a frame that is too shallow vertically will cut off the patient's reading zone.",
         imageUrl: "https://picsum.photos/seed/frames2/1200/800",
       },
       {
@@ -927,7 +927,7 @@ export const INITIAL_MODULES: Module[] = [
         id: "ff5",
         title: "Width and Face Form",
         content:
-          "The frame should be approximately as wide as the widest part of the face (the cheekbones). If the temples bow out, the frame is too narrow. If there is more than a finger's width between the temple and the head, it's too wide. Adjusting Face Form (wrap) can fine-tune the fit and clear peripheral vision.",
+          "The frame should be approximately as wide as the widest part of the face (the cheekbones). If the temples bow out, the frame is too narrow. If there is more than a finger's width between the temple and the head, it's too wide. The temples should be straight back from the face of the glasses—you don't want them to be super curved in or super bowed out. Either one of those means the frame does not fit well. Adjusting Face Form (wrap) can fine-tune the fit and clear peripheral vision.",
         imageUrl: "https://picsum.photos/seed/frames5/1200/800",
       },
     ],
