@@ -4,7 +4,7 @@
 
 ### Professional Optician Training & Certification Platform
 
-*A modern, interactive learning platform for opticians to master clinical skills, lens designs, and patient care*
+*A comprehensive, interactive learning platform for opticians to master clinical skills, lens designs, and patient care*
 
 [![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6.2.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
@@ -42,6 +42,7 @@
 - **📱 Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **⚡ Hot Module Replacement**: Instant updates during development
 - **🎨 Modern UI**: Sleek, professional interface built with Tailwind CSS
+- **🔄 Smart Caching**: Automatic cache-busting for seamless updates
 
 ---
 
@@ -63,10 +64,10 @@ OptiStep Academy offers comprehensive training across multiple domains:
 | 10 | **Eye Anatomy** | Anatomy | Understanding eye structures and functions |
 
 Each module includes:
-- 📸 5 detailed instructional slides
+- 📸 Detailed instructional slides with images and videos
 - 🎬 Comprehensive video tutorial
-- 📝 5-question qualifying exam (80% pass mark)
-- ✅ Certificate of completion
+- 📝 Qualifying exam (80% pass mark required)
+- ✅ Certificate of completion upon passing
 
 ---
 
@@ -76,8 +77,7 @@ Each module includes:
 
 - **Node.js** (v18 or higher recommended)
 - **npm** or **yarn** package manager
-- **Firebase account** (for authentication features)
-- **Google Gemini API key** (optional, for AI features)
+- **Firebase account** (for authentication and database features)
 
 ### Installation
 
@@ -92,11 +92,18 @@ Each module includes:
    npm install
    ```
 
-3. **Configure environment variables**
+3. **Configure Firebase**
    
-   Create a `.env.local` file in the root directory:
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key_here
+   Update `src/lib/firebase.ts` with your Firebase project credentials:
+   ```typescript
+   const firebaseConfig = {
+     apiKey: "your-api-key",
+     authDomain: "your-auth-domain",
+     projectId: "your-project-id",
+     storageBucket: "your-storage-bucket",
+     messagingSenderId: "your-sender-id",
+     appId: "your-app-id"
+   };
    ```
 
 4. **Start the development server**
@@ -112,8 +119,17 @@ Each module includes:
 
 ```bash
 npm run build
-npm run preview
 ```
+
+The production-ready files will be generated in the `dist/` directory.
+
+### Deploy to Vercel
+
+```bash
+npx vercel --prod
+```
+
+The project includes optimized caching configuration for Vercel deployments.
 
 ---
 
@@ -133,7 +149,6 @@ npm run preview
 
 ### Backend & Services
 - **[Firebase](https://firebase.google.com/)** - Authentication and Firestore database
-- **[@google/genai](https://github.com/google/generative-ai-js)** - Google Gemini AI integration
 
 ### Development Tools
 - **[tsx](https://github.com/esbuild-kit/tsx)** - TypeScript execution
@@ -148,11 +163,15 @@ optistep-academy/
 ├── public/                      # Static assets
 │   ├── slideimages/            # Module slide images
 │   │   ├── troubleshooting/    # Module 1 images
-│   │   └── lens design/        # Module 2 images
+│   │   ├── lens design/        # Module 2 images
+│   │   ├── medicaid/           # Kentucky Medicaid images
+│   │   └── framefit/           # Frame fitting images
 │   ├── slidevideos/            # Module videos
 │   │   ├── trouble.mp4
-│   │   └── lensdesign.mp4
-│   └── sw.js                   # Service Worker (PWA)
+│   │   ├── lensdesign.mp4
+│   │   └── kentucky.gif
+│   ├── sw.js                   # Service Worker (PWA)
+│   └── site.webmanifest        # PWA manifest
 ├── src/
 │   ├── components/             # Reusable UI components
 │   │   ├── Auth.tsx           # Authentication component
@@ -171,8 +190,8 @@ optistep-academy/
 │   ├── main.tsx               # Application entry point
 │   ├── index.css              # Global styles
 │   └── types.ts               # TypeScript type definitions
-├── .env.example               # Environment variables template
-├── firebase-blueprint.json    # Firebase configuration
+├── vercel.json                 # Vercel deployment configuration
+├── firebase-blueprint.json    # Firebase configuration template
 ├── package.json               # Dependencies and scripts
 ├── tsconfig.json              # TypeScript configuration
 ├── vite.config.ts             # Vite build configuration
@@ -213,6 +232,8 @@ To add a new learning module, edit `src/constants/modules.ts`:
       title: 'Slide Title',
       content: 'Slide content...',
       imageUrl: '/slideimages/module/slide1.jpg'
+      // OR for GIF/video slides:
+      // videoUrl: '/slidevideos/animation.gif'
     },
     // ... more slides
   ],
@@ -235,10 +256,20 @@ To add a new learning module, edit `src/constants/modules.ts`:
 **Images:** Place in `public/slideimages/[module-name]/`
 - Supported formats: JPG, PNG, WebP
 - Recommended size: 1200x800px
+- Images display with `object-contain` to show full content
 
-**Videos:** Place in `public/slidevideos/`
-- Supported format: MP4 (H.264 codec)
-- Optimize for web streaming
+**Videos & GIFs:** Place in `public/slidevideos/`
+- Supported formats: MP4 (H.264 codec), GIF
+- Videos support autoplay and loop functionality
+- GIFs are automatically detected and displayed as animated images
+
+### Cache Management
+
+The application implements multi-layer cache busting:
+- Content hashing for all build assets
+- HTML cache prevention meta tags
+- Vercel cache headers configured in `vercel.json`
+- Users automatically receive updates without manual refresh
 
 ---
 
@@ -248,10 +279,10 @@ To add a new learning module, edit `src/constants/modules.ts`:
 - Clean, card-based module overview
 - Visual progress indicators
 - Quick access to incomplete modules
-- Category-based filtering
+- Category-based organization
 
 ### Module Learning Flow
-1. **📸 Slide Presentation** - Interactive slides with navigation
+1. **📸 Slide Presentation** - Interactive slides with images, videos, and GIFs
 2. **🎥 Video Tutorial** - Embedded HD video player
 3. **📝 Qualifying Exam** - Multiple-choice assessment
 4. **✅ Certification** - Instant feedback and completion tracking
@@ -261,6 +292,7 @@ To add a new learning module, edit `src/constants/modules.ts`:
 - **Responsive Layout** - Mobile-first design approach
 - **Accessibility** - Semantic HTML and keyboard navigation
 - **Performance** - Code splitting and lazy loading
+- **Full Image Display** - All images use `object-contain` for complete visibility
 
 ---
 
@@ -298,6 +330,7 @@ Contributions are welcome! Please follow these steps:
 - Maintain consistent code formatting
 - Write meaningful commit messages
 - Test on multiple screen sizes
+- Ensure all images display completely (use object-contain)
 
 ---
 

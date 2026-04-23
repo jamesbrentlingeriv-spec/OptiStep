@@ -662,6 +662,13 @@ export const INITIAL_MODULES: Module[] = [
           "1. Verify State eligibility via KYMMIS. 2. Login to correct MCO portal. 3. Check Accumulators/Usage. 4. Confirm Frame/Lens boxes aren't greyed out. 5. Guide patient to the back wall for frames. 6. Verify and save IDs and card copies.",
         imageUrl: "/slideimages/medicaid/final_check.jpg",
       },
+      {
+        id: "km-20",
+        title: "Kentucky Medicaid Training Video",
+        content:
+          '<span style="color: #FFD700; font-weight: bold;">COMPREHENSIVE MEDICAID TRAINING VIDEO</span><br/><br/>Watch this complete training video covering all aspects of Kentucky Medicaid verification, Avesis portal navigation, EyeQuest workflows, and best practices for processing Medicaid orders.',
+        videoUrl: "/slidevideos/medicaid.mp4",
+      },
     ],
     quiz: {
       questions: [
