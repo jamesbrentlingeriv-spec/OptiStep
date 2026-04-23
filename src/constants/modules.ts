@@ -597,70 +597,70 @@ export const INITIAL_MODULES: Module[] = [
         title: "Humana: Eligibility Search",
         content:
           "Input the Humana Member ID and the Date of Birth. If the Humana ID isn't working, use the KY Medicaid ID. Ensure the name spelling matches the state record exactly.",
-        imageUrl: "/slideimages/medicaid/eyequest_search.jpg",
+        imageUrl: "/slideimages/medicaid/km10.png",
       },
       {
         id: "km-11",
         title: "Humana: Navigating the Claim Form",
         content:
           'Once you click on the patient’s coverage on the Eligibility Search page, it pulls up a claim form. Disregard everything on this form except for the four checkmark boxes at the top. Ensure the "Frame" and "Lens" boxes are NOT greyed out. If they are greyed out, the patient has no hardware benefits available.',
-        imageUrl: "/slideimages/medicaid/eyequest_claim_form.jpg",
+        imageUrl: "/slideimages/medicaid/km11.png",
       },
       {
         id: "km-12",
         title: "Humana: Secondary & Replacement Benefits",
         content:
           'If the patient has used up their first pair already, look for the dropdown box on the top right of the page that says "Primary Benefit." Check for "Secondary Benefit" or "Replacement Eyewear." Selecting this will often ungrey the frame and lens boxes, making the patient eligible for a second pair.',
-        imageUrl: "/slideimages/medicaid/eyequest_dropdown.jpg",
+        imageUrl: "/slideimages/medicaid/km12.png",
       },
       {
         id: "km-13",
         title: "Frequency Rules: January 1st Rollover",
         content:
           "All KY Medicaid users, whether MCO or Traditional, have their benefits roll over on January 1st. They are not restricted by rolling months. Theoretically, a patient could get a second pair for the year on December 30th and be eligible for another on January 1st.",
-        imageUrl: "/slideimages/medicaid/jan_rollover.jpg",
+        imageUrl: "/slideimages/medicaid/km13.jpg",
       },
       {
         id: "km-14",
         title: "Medicaid Frame Selection & Humana Restrictions",
         content:
           "We offer a wide selection of frames including Modern, Smilen, Gotham, and Broadway. However, Humana is stricter; they only accept frames from their specific list. This includes almost every Modern frame on the backwall, but NONE of the Smilen, Gotham, or Broadway styles. If a Humana patient buys a frame not on the list or brings their own, they must pay a $9.54 mail fee as we have to ship the frame to insurance at our cost.",
-        imageUrl: "/slideimages/medicaid/frame_types.jpg",
+        imageUrl: "/slideimages/medicaid/km14.png",
       },
       {
         id: "km-15",
         title: "Office Layout: Locating Frames",
         content:
           "The Medicaid frames are located on the very back wall cases. Additionally, you can find them on the last shelf on the left side, right next to the door that leads to the back office.",
-        imageUrl: "/slideimages/medicaid/office_layout.jpg",
+        imageUrl: "/slideimages/medicaid/km14.png",
       },
       {
         id: "km-16",
         title: "Medicaid Lens Upgrades & Prior Auths",
         content:
           "Most upgrades are possible with Medicaid at no additional cost to the patient, but only for MCO Medicaid (not Traditional State). Upgrades like high-index, AR coating, and Transitions require a Prior Auth—Transitions specifically requires a strict photophobia diagnosis (e.g., Aniridia). Humana differs: if the RX is ±8.00 or stronger, high-index and AR are covered automatically without a Prior Auth.",
-        imageUrl: "/slideimages/medicaid/lens_rules.jpg",
+        imageUrl: "/slideimages/medicaid/km16.jpg",
       },
       {
         id: "km-17",
         title: "The Out-of-Pocket Discussion",
         content:
           'Medicaid will NOT pay any portion toward frames outside of the specific selection mentioned previously (Modern/Smilen/Gotham/Broadway). If a patient chooses a different frame, they must pay the full retail amount. Always have the patient sign a "Member Responsibility" waiver before proceeding with private-pay components.',
-        imageUrl: "/slideimages/medicaid/oop_talk.jpg",
+        imageUrl: "/slideimages/medicaid/km17.jpg",
       },
       {
         id: "km-18",
         title: "ID Verification & Documentation",
         content:
           "Before finalizing any order, double check to make sure we have the correct Medicaid ID in the patient file. In the case of Humana, ensure we have the specific Humana ID recorded as well. It is preferred that we keep a clear scan or photocopy of the insurance card in their file to prevent billing errors.",
-        imageUrl: "/slideimages/medicaid/id_check.jpg",
+        imageUrl: "/slideimages/medicaid/km18.png",
       },
       {
         id: "km-19",
         title: "Final Summary Checklist",
         content:
           "1. Verify State eligibility via KYMMIS. 2. Login to correct MCO portal. 3. Check Accumulators/Usage. 4. Confirm Frame/Lens boxes aren't greyed out. 5. Guide patient to the back wall for frames. 6. Verify and save IDs and card copies.",
-        imageUrl: "/slideimages/medicaid/final_check.jpg",
+        imageUrl: "/slideimages/medicaid/km19.jpg",
       },
       {
         id: "km-20",
