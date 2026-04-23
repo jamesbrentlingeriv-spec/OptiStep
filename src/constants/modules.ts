@@ -639,28 +639,28 @@ export const INITIAL_MODULES: Module[] = [
         title: "Medicaid Lens Upgrades & Prior Auths",
         content:
           "Most upgrades are possible with Medicaid at no additional cost to the patient, but only for MCO Medicaid (not Traditional State). Upgrades like high-index, AR coating, and Transitions require a Prior Auth—Transitions specifically requires a strict photophobia diagnosis (e.g., Aniridia). Humana differs: if the RX is ±8.00 or stronger, high-index and AR are covered automatically without a Prior Auth.",
-        imageUrl: "/slideimages/medicaid/lens_rules.jpg",
+        imageUrl: "/slideimages/medicaid/km16.jpg",
       },
       {
         id: "km-17",
         title: "The Out-of-Pocket Discussion",
         content:
           'Medicaid will NOT pay any portion toward frames outside of the specific selection mentioned previously (Modern/Smilen/Gotham/Broadway). If a patient chooses a different frame, they must pay the full retail amount. Always have the patient sign a "Member Responsibility" waiver before proceeding with private-pay components.',
-        imageUrl: "/slideimages/medicaid/oop_talk.jpg",
+        imageUrl: "/slideimages/medicaid/km17.jpg",
       },
       {
         id: "km-18",
         title: "ID Verification & Documentation",
         content:
           "Before finalizing any order, double check to make sure we have the correct Medicaid ID in the patient file. In the case of Humana, ensure we have the specific Humana ID recorded as well. It is preferred that we keep a clear scan or photocopy of the insurance card in their file to prevent billing errors.",
-        imageUrl: "/slideimages/medicaid/id_check.jpg",
+        imageUrl: "/slideimages/medicaid/km18.png",
       },
       {
         id: "km-19",
         title: "Final Summary Checklist",
         content:
           "1. Verify State eligibility via KYMMIS. 2. Login to correct MCO portal. 3. Check Accumulators/Usage. 4. Confirm Frame/Lens boxes aren't greyed out. 5. Guide patient to the back wall for frames. 6. Verify and save IDs and card copies.",
-        imageUrl: "/slideimages/medicaid/final_check.jpg",
+        imageUrl: "/slideimages/medicaid/km19.jpg",
       },
     ],
     quiz: {
