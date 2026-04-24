@@ -879,6 +879,57 @@ export const INITIAL_MODULES: Module[] = [
     },
   },
   {
+    id: "VSP",
+    title: "Navigating VSP ot Vision Service Plan",
+    description:
+      "Navigation of the Eyefinity website for VSP (Vision Service Plan).",
+    content:
+      "Advanced administrative workflows for verifying eligibility, checking usage, and managing prior authorizations.",
+    videoUrl: "/slidevideos/VSP.mp4",
+    order: 5,
+    category: "Administrative",
+    slides: [
+      {
+        id: "vsp-1",
+        title: "Introduction to VSP",
+        content:
+          "Once pulling up Eyefinity and loggin in, you will click on Get Authorizations and Check Eligibility.",
+        imageUrl: "/slideimages/vsp/vsp1.png",
+      },
+      {
+        id: "vsp-2",
+        title: "Pulling Authorizations from VSP",
+        content:
+          '<span style="color: #FFD700; font-weight: bold;">ATTENTION! Click member search as the bottom left of the page. Then you can type in patient info!</span><br/><br/>Type in your patients name and D.O.B., or their full SS# and you will see there name populate a list below. Remember that you must use the primary members info, not spouse or dependents.',
+        imageUrl: "/slideimages/vsp/vsp2.png,"
+      },
+      {
+        id: "vsp-3",
+        title: "VSP Authorizations",
+        content:
+          "Click on your patient's name and you will see a list of authorizations and open benefits. Click on what materials they are getting, such as Frame and Lens, and then click authorize.",
+        imageUrl: "/slideimages/vsp/vsp3.png,"
+      },
+      {
+        id: "vsp-4",
+        title: "VSP Printing the Doctor Report",
+        content:
+          'Once you clicked authorize as we did in the last slide, a pdf report called Doctors Report will pop up. Print this report as it has all your benefit information.',
+        imageUrl: "/slideimages/vsp/vsp4.png",
+      },
+      {
+        id: "vsp-5",
+        title: "VSP Lens Enhancements",
+        content:
+          "At the top right of the report you just printed is a tab that says Lens Enhancements. Print this as well because it will tell you how much each addon is for the specific patients plan.",
+        imageUrl: "/slideimages/vsp/vsp5.png",
+      },
+    ],
+    quiz: { questions: generateMockQuestions(5, "VSP") },
+  },
+      
+  
+  {
     id: "frame-fitting",
     title: "Frame Fitting Guide",
     description: "Master the art of perfect frame selection and fitting.",
