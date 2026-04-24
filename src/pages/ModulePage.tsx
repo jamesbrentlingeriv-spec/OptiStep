@@ -242,7 +242,7 @@ export default function ModulePage() {
                   {/* PDF Viewer */}
                   <div className="aspect-[3/4] bg-surface-hover rounded-2xl border border-line overflow-hidden">
                     <iframe
-                      src={`${module.id === 'prism-prentice' ? '/Prism.pdf' : ''}`}
+                      src={`${module.id === 'prism-prentice' ? '/Prism.pdf#zoom=page-fit&view=FitH' : ''}`}
                       className="w-full h-full"
                       title="Reference PDF"
                     />
