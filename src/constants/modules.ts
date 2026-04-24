@@ -932,7 +932,7 @@ export const INITIAL_MODULES: Module[] = [
     description: "Learn calculations for induced prism and centration.",
     content:
       "Prism = dcm * Power. Mastering Prentice Rule is vital for avoiding unwanted prismatic effects.",
-    videoUrl: "https://www.youtube.com/embed/prism-prentice",
+    videoUrl: "/slidevideos/prism.mp4",
     order: 6,
     category: "Calculations",
     slides: [
@@ -941,35 +941,35 @@ export const INITIAL_MODULES: Module[] = [
         title: "Understanding Induced Prism",
         content:
           "Induced prism occurs when a patient looks through a lens at a point other than its optical center (OC). This displacement causes light to bend, creating a prismatic effect. This can be intentional (prescribed) or unintentional (poor measurement). It is measured in prism diopters (Δ).",
-        imageUrl: "https://picsum.photos/seed/prism1/1200/800",
+        imageUrl: "/slideimages/prism/prism1.jpg",
       },
       {
         id: "pr2",
         title: "The Prentice Rule Formula",
         content:
           "Prentice Rule calculates induced prism: P = c × F. P is prism in diopters, c is decentration in CENTIMETERS, and F is lens power in the meridian. Example: A +4.00D lens de-centered by 5mm (0.5cm) induces 0.5 * 4 = 2.0Δ of prism.",
-        imageUrl: "https://picsum.photos/seed/prism2/1200/800",
+        imageUrl: "/slideimages/prism/prism2.jpg",
       },
       {
         id: "pr3",
         title: "Base Direction: Plus vs. Minus",
         content:
           'For plus lenses, the prism base follows the direction of decentration (Base follows the "bulge"). For minus lenses, the base direction is opposite the decentration (Base points away from the "thin spot"). Correctly identifying base direction is critical for binocular comfort.',
-        imageUrl: "https://picsum.photos/seed/prism3/1200/800",
+        imageUrl: "/slideimages/prism/prism3.jpg",
       },
       {
         id: "pr4",
         title: "Binocular Prism: Compounding vs. Canceling",
         content:
           "Horizontal prism bases in the same direction (e.g., both Base-In) subtract from each other. Bases in opposite directions (Base-In and Base-Out) add. In vertical prism, same-direction bases (Base-Up in both) subtract, while opposite directions (Base-Up and Base-Down) add. Misalignment can cause binocular diplopia.",
-        imageUrl: "https://picsum.photos/seed/prism4/1200/800",
+        imageUrl: "/slideimages/prism/prism4.jpg",
       },
       {
         id: "pr5",
         title: "Practical Application: Slab-Off Prism",
         content:
           "In cases of significant anisometropia (different Rx in each eye), patients may experience vertical imbalance when reading. Slab-off prism is a laboratory process used to compensate for this vertical imbalance, ensuring the patient can look through the reading zone comfortably without seeing double.",
-        imageUrl: "https://picsum.photos/seed/prism5/1200/800",
+        imageUrl: "/slideimages/prism/prism5.jpg",
       },
     ],
     quiz: { questions: generateMockQuestions(5, "Prism") },

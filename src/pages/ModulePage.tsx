@@ -22,7 +22,7 @@ export default function ModulePage() {
   const { profile, refreshProfile } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const [currentStep, setCurrentStep] = useState<'slides' | 'video' | 'quiz' | 'result'>('slides');
+  const [currentStep, setCurrentStep] = useState<'slides' | 'video' | 'pdf' | 'quiz' | 'result'>('slides');
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<number[]>([]);
   const [quizResult, setQuizResult] = useState<{ score: number; passed: boolean } | null>(null);
@@ -59,6 +59,10 @@ export default function ModulePage() {
   const handleStartQuiz = () => {
     setQuizAnswers(new Array(module.quiz.questions.length).fill(-1));
     setCurrentStep('quiz');
+  };
+
+  const handleProceedToPDF = () => {
+    setCurrentStep('pdf');
   };
 
   const handleAnswerChange = (qIndex: number, aIndex: number) => {
@@ -203,10 +207,10 @@ export default function ModulePage() {
                     <ArrowLeft size={16} /> Review Slides
                   </button>
                   <button 
-                    onClick={handleStartQuiz}
+                    onClick={handleProceedToPDF}
                     className="flex-[2] bg-brand text-white p-4 lg:p-6 rounded-2xl font-bold text-xs lg:text-sm tracking-tight hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 active:scale-[0.98] flex items-center justify-center gap-3"
                   >
-                    Proceed to Exam ({module.quiz.questions.length} Questions) <ChevronRight size={16} />
+                    View Reference Material <ChevronRight size={16} />
                   </button>
                 </div>
                 <div className="bg-surface-panel p-6 lg:p-8 rounded-[24px] lg:rounded-[32px] border border-line shadow-xl">
@@ -214,6 +218,51 @@ export default function ModulePage() {
                   <p className="text-[12px] lg:text-sm text-text-muted leading-relaxed">
                     You have completed the theoretical slides. Please watch the summary video above. When ready, proceed to the qualifying exam. A score of 80% or higher is mandatory for module authentication.
                   </p>
+                </div>
+              </motion.div>
+            )}
+
+            {currentStep === 'pdf' && (
+              <motion.div 
+                key="pdf"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                className="space-y-6 lg:space-y-8"
+              >
+                <div className="bg-surface-panel p-6 lg:p-8 rounded-[24px] lg:rounded-[32px] border border-line shadow-xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <FileText className="text-brand" size={24} />
+                    <h3 className="font-bold text-text-primary text-lg lg:text-xl tracking-tight">Reference Material</h3>
+                  </div>
+                  <p className="text-sm lg:text-base text-text-muted leading-relaxed mb-6">
+                    Review this comprehensive reference guide before taking the qualifying exam. This document contains essential information that will help you succeed.
+                  </p>
+                  
+                  {/* PDF Viewer */}
+                  <div className="aspect-[3/4] bg-surface-hover rounded-2xl border border-line overflow-hidden">
+                    <iframe
+                      src={`${module.id === 'prism-prentice' ? '/Prism.pdf' : ''}`}
+                      className="w-full h-full"
+                      title="Reference PDF"
+                    />
+                  </div>
+                  
+                  <div className="mt-6 flex flex-col sm:flex-row gap-3 lg:gap-4">
+                    <a
+                      href={module.id === 'prism-prentice' ? '/Prism.pdf' : '#'}
+                      download
+                      className="flex-1 bg-surface-panel p-4 lg:p-6 rounded-2xl border border-line flex items-center justify-center gap-3 font-bold text-xs lg:text-sm text-text-muted hover:bg-surface-hover transition-colors"
+                    >
+                      <FileText size={16} /> Download PDF
+                    </a>
+                    <button 
+                      onClick={handleStartQuiz}
+                      className="flex-[2] bg-brand text-white p-4 lg:p-6 rounded-2xl font-bold text-xs lg:text-sm tracking-tight hover:bg-brand/90 transition-all shadow-lg shadow-brand/20 active:scale-[0.98] flex items-center justify-center gap-3"
+                    >
+                      Proceed to Exam ({module.quiz.questions.length} Questions) <ChevronRight size={16} />
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             )}

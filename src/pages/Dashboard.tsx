@@ -10,6 +10,7 @@ import {
   ArrowRight,
   TrendingUp,
   Award,
+  FileText,
 } from "lucide-react";
 import { cn } from "../lib/utils";
 
@@ -146,6 +147,11 @@ export default function Dashboard() {
                     <span className="text-[9px] lg:text-[10px] font-bold text-text-muted uppercase tracking-[0.2em]">
                       Session {module.order}
                     </span>
+                    {isCompleted && module.id === 'prism-prentice' && (
+                      <span className="ml-auto flex items-center gap-1 px-2 py-0.5 bg-brand/10 text-brand text-[8px] lg:text-[9px] font-bold uppercase tracking-wider rounded-md">
+                        <FileText size={10} /> Reference PDF
+                      </span>
+                    )}
                   </div>
                   <h3 className="font-bold text-sm lg:text-base text-text-primary tracking-tight transition-colors truncate">
                     {module.title}
