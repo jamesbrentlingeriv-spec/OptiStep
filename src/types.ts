@@ -27,6 +27,7 @@ export interface Module {
   category: string;
   slides: Slide[];
   quiz: Quiz;
+  logo?: string;
 }
 
 export interface UserProfile {

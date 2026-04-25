@@ -125,7 +125,7 @@ export default function Dashboard() {
               >
                 <div
                   className={cn(
-                    "w-10 h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center shrink-0 transition-all",
+                    "w-10 h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center shrink-0 transition-all overflow-hidden",
                     isCompleted
                       ? "bg-emerald-500/10 text-emerald-400"
                       : "bg-line text-text-secondary group-hover:bg-brand group-hover:text-white",
@@ -133,6 +133,12 @@ export default function Dashboard() {
                 >
                   {isCompleted ? (
                     <CheckCircle2 size={18} />
+                  ) : module.logo ? (
+                    <img 
+                      src={module.logo} 
+                      alt={`${module.title} logo`}
+                      className="w-full h-full object-contain p-1.5 lg:p-2"
+                    />
                   ) : (
                     <Play size={18} />
                   )}

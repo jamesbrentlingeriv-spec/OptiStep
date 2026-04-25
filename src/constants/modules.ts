@@ -398,7 +398,7 @@ export const INITIAL_MODULES: Module[] = [
         id: "ref5",
         title: "Professional Empathy & Policy Delivery",
         content:
-          'Tone is everything. Avoid saying "It\'s just our policy." Instead, use: "Because these lenses were custom-manufactured for your unique prescription, we aren\'t able to offer a refund on that portion. However, we certainly want to make sure you aren\'t stuck with a frame you don\'t want, so we can process a full refund for the frame itself."',
+          "Tone is everything. Avoid saying \"It's just our policy.\" Instead, use: \"Because these lenses were custom-manufactured for your unique prescription, we aren't able to offer a refund on that portion. However, we certainly want to make sure you aren't stuck with a frame you don't want, so we can process a full refund for the frame itself.\"",
         imageUrl: "/slideimages/refund/refund5.png",
       },
     ],
@@ -728,7 +728,7 @@ export const INITIAL_MODULES: Module[] = [
         },
         {
           id: "kmc-q7",
-          text: 'Which diagnosis is strictly required for Prior Auth to approve Transitions (photochromic) lenses?',
+          text: "Which diagnosis is strictly required for Prior Auth to approve Transitions (photochromic) lenses?",
           options: [
             "Severe Myopia",
             "Strict photophobia (e.g. Aniridia)",
@@ -885,7 +885,7 @@ export const INITIAL_MODULES: Module[] = [
       "Navigation of the Eyefinity website for VSP (Vision Service Plan).",
     content:
       "Advanced administrative workflows for verifying eligibility, checking usage, and managing prior authorizations.",
-    videoUrl: "/slidevideos/VSP.mp4",
+    videoUrl: "/slidevideos/vsp.mp4",
     order: 5,
     category: "Administrative",
     slides: [
@@ -900,21 +900,21 @@ export const INITIAL_MODULES: Module[] = [
         id: "vsp-2",
         title: "Pulling Authorizations from VSP",
         content:
-          '<span style="color: #FFD700; font-weight: bold;">ATTENTION! Click member search as the bottom left of the page. Then you can type in patient info!</span><br/><br/>Type in your patients name and D.O.B., or their full SS# and you will see there name populate a list below. Remember that you must use the primary members info, not spouse or dependents.',
-        imageUrl: "/slideimages/vsp/vsp2.png,"
+          '<span style="color: #FFD700; font-weight: bold;">ATTENTION! Click member search as the bottom left of the previous page. Then you can type in patient info!</span><br/><br/>Type in your patients name and D.O.B., or their full SS# and you will see there name populate a list below. Remember that you must use the primary members info, not spouse or dependents.',
+        imageUrl: "/slideimages/vsp/vsp2.png",
       },
       {
         id: "vsp-3",
         title: "VSP Authorizations",
         content:
           "Click on your patient's name and you will see a list of authorizations and open benefits. Click on what materials they are getting, such as Frame and Lens, and then click authorize.",
-        imageUrl: "/slideimages/vsp/vsp3.png,"
+        imageUrl: "/slideimages/vsp/vsp3.png",
       },
       {
         id: "vsp-4",
         title: "VSP Printing the Doctor Report",
         content:
-          'Once you clicked authorize as we did in the last slide, a pdf report called Doctors Report will pop up. Print this report as it has all your benefit information.',
+          "Once you clicked authorize as we did in the last slide, a pdf report called Doctors Report will pop up. Print this report as it has all your benefit information.",
         imageUrl: "/slideimages/vsp/vsp4.png",
       },
       {
@@ -925,10 +925,67 @@ export const INITIAL_MODULES: Module[] = [
         imageUrl: "/slideimages/vsp/vsp5.png",
       },
     ],
-    quiz: { questions: generateMockQuestions(5, "VSP") },
+    quiz: {
+      questions: [
+        {
+          id: 'vsp-q1',
+          text: "After logging into Eyefinity, which specific link must you click to begin the process of verifying a patient's VSP coverage?",
+          options: [
+            'Submit a New Claim',
+            'Get Authorizations and Check Eligibility',
+            'Patient History Search',
+            'View Practice Reports'
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'vsp-q2',
+          text: "When searching for a patient on the VSP Member Search page, what critical rule must you remember regarding spouses or children?",
+          options: [
+            "You should search using the dependent's name and social security number.",
+            "You must use the primary member's information (SS# or Name/DOB) to find the policy.",
+            'Dependents must have their own separate Eyefinity login.',
+            "You only need the patient's phone number to pull the authorization."
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'vsp-q3',
+          text: 'How do you finalize the authorization once you have selected the patient and their specific open benefits (like Frame and Lens)?',
+          options: [
+            'Click the "Save for Later" button.',
+            'Click the "Authorize" button to generate the claim numbers.',
+            'Email the patient their benefit summary.',
+            "Close the browser window and reopen it."
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'vsp-q4',
+          text: "What is the name of the PDF that automatically pops up after you click authorize, and why is it important?",
+          options: [
+            'The Lab Invoice; it tells you how much the frames cost.',
+            'The Doctors Report; it contains all the essential benefit information for the visit.',
+            'The Privacy Policy; it must be signed by the patient.',
+            "The Prescription Card; it shows the patient's current Rx."
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'vsp-q5',
+          text: 'Where is the "Lens Enhancements" tab located, and what information does it provide for the patient?',
+          options: [
+            'At the bottom of the home page; it lists all available frames.',
+            'Inside the frame display case; it shows the retail prices.',
+            "At the top right of the printed Doctor's Report; it tells you the specific copays for add-ons like AR or transitions.",
+            "On the back of the patient's insurance card; it lists the doctor's phone number."
+          ],
+          correctAnswerIndex: 2
+        }
+      ]
+    },
   },
-      
-  
+
   {
     id: "frame-fitting",
     title: "Frame Fitting Guide",
@@ -1027,11 +1084,11 @@ export const INITIAL_MODULES: Module[] = [
   },
   {
     id: "transitions-gen-s",
-    title: "Transitions Gen S Technology",
+    title: "Transitions: All in One Eyeglasses",
     description: "The latest in photochromic lens technology.",
     content:
       "Understand the speed, color options, and performance metrics of the new Gen S lenses.",
-    videoUrl: "https://www.youtube.com/embed/transitions-gen-s",
+    videoUrl: "/slidevideos/transitions.mp4",
     order: 7,
     category: "Lenses",
     slides: [
@@ -1040,38 +1097,132 @@ export const INITIAL_MODULES: Module[] = [
         title: "Ultra-Fast Activation and Fade-Back",
         content:
           "Transitions Gen S is the fastest darkening photochromic lens ever developed. It reaches Category 3 darkness (sunglass level) in seconds when exposed to UV and returns to clear indoors significantly faster than previous generations like Gen 8.",
-        imageUrl: "https://picsum.photos/seed/gens1/1200/800",
+        imageUrl: "/slideimages/trans/photo1.jpg",
       },
       {
         id: "gs2",
         title: "Style Without Compromise: 8 Colors",
         content:
           "Gen S offers 8 vibrant colors: Amber, Amethyst, Emerald, Sapphire, Brown, Graphite Green, Gray, and the new Ruby. This allows patients to pair high-performance protection with trendy frame styles, moving light-sensitive lenses into the world of fashion.",
-        imageUrl: "https://picsum.photos/seed/gens2/1200/800",
+        imageUrl: "/slideimages/trans/photo2.png",
       },
       {
         id: "gs3",
         title: "100% Protection & Blue Light Blocking",
         content:
           "All Gen S lenses block 100% of UVA and UVB rays. Furthermore, they block harmful blue-violet light both indoors and outdoors, protecting patients from high-energy visible light from screens and the sun.",
-        imageUrl: "https://picsum.photos/seed/gens3/1200/800",
+        imageUrl: "/slideimages/trans/photo3.jpg",
       },
       {
         id: "gs4",
         title: "Indoor Performance: Zero Residual Tint",
         content:
           'A common complaint with older photochromics was a yellow or gray "residual tint" indoors. Gen S is designed to be perfectly clear indoors, maintaining primary lens aesthetics and ensuring no distortion of colors while working or reading in low light.',
-        imageUrl: "https://picsum.photos/seed/gens4/1200/800",
+        imageUrl: "/slideimages/trans/photo4.jpg",
       },
       {
         id: "gs5",
         title: "High Contrast & Precision Optics",
         content:
           "Gen S technology improves high-contrast vision during recovery, allowing patients to adapt to changing light conditions seamlessly. This makes them a superior choice for active patients who move frequently between indoor and outdoor tasks throughout the day.",
-        imageUrl: "https://picsum.photos/seed/gens5/1200/800",
+        imageUrl: "/slideimages/trans/photo5.jpg",
+      },
+      {
+        id: "gs6",
+        title: "XTRActive: Power Behind the Windshield",
+        content:
+          "Transitions XTRActive New Generation is specifically engineered for patients who are highly light-sensitive or spend significant time driving. Unlike standard photochromics, these lenses utilize extra-powerful dyes that react to visible light, allowing them to darken inside a car and achieve even deeper darkness in hot temperatures.",
+        imageUrl: "/slideimages/trans/photo6.jpg",
+      },
+      {
+        id: "gs7",
+        title: "XTRActive Polarized: The Ultimate Glare Solution",
+        content:
+          "Designed for those who encounter blinding glare—like light reflecting off water, snow, or the road—these lenses feature dynamic polarization. They start clear with a hint of protective tint indoors and become polarized as they darken outdoors, efficiently cutting through reflected glare for sharper, more comfortable vision.",
+        imageUrl: "/slideimages/trans/photo7.png",
       },
     ],
-    quiz: { questions: generateMockQuestions(5, "Transitions Gen S") },
+    quiz: {
+      questions: [
+        {
+          id: 'gs-q1',
+          text: 'How does the speed of Transitions Gen S compare to previous generations like Gen 8?',
+          options: [
+            'It is slower to darken but reaches a darker level of tint.',
+            'It is the fastest darkening lens developed, reaching Category 3 darkness in seconds and returning to clear faster.',
+            'It has the exact same activation speed but comes in more colors.',
+            'It only reaches Category 1 darkness to ensure it stays clear.'
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'gs-q2',
+          text: 'Which of the following lists the correct number of available colors and the newest addition to the Gen S lineup?',
+          options: [
+            '6 colors; Emerald is the newest.',
+            '4 colors; Graphite Green is the newest.',
+            '8 colors; Ruby is the newest.',
+            '7 colors; Sapphire is the newest.'
+          ],
+          correctAnswerIndex: 2
+        },
+        {
+          id: 'gs-q3',
+          text: 'What type of light protection does Gen S provide for patients both indoors and outdoors?',
+          options: [
+            '100% UVA/UVB protection and harmful blue-violet light blocking.',
+            'Only UV protection; blue light blocking requires a separate coating.',
+            'Protection against infrared heat only.',
+            'Polarized glare protection in all lighting conditions.'
+          ],
+          correctAnswerIndex: 0
+        },
+        {
+          id: 'gs-q4',
+          text: 'What aesthetic issue found in older photochromic lenses does Gen S eliminate when the wearer is indoors?',
+          options: [
+            'The lenses becoming too thick.',
+            'A yellow or gray "residual tint" that causes color distortion.',
+            'Lenses fogging up when moving between temperatures.',
+            'The anti-reflective coating peeling off.'
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'gs-q5',
+          text: 'Why is Gen S specifically recommended for "active patients" who move between environments?',
+          options: [
+            'Because the lenses are made of high-impact rubber.',
+            'Because they are only available in wrap-around sport frames.',
+            'Because they improve high-contrast vision during recovery, helping patients adapt to changing light seamlessly.',
+            'Because they never get dark enough to require removal.'
+          ],
+          correctAnswerIndex: 2
+        },
+        {
+          id: 'gs-q6',
+          text: 'A patient mentions they are very light-sensitive while driving. Why is Transitions XTRActive the best recommendation for them?',
+          options: [
+            'Because they are the only lenses that turn a dark polarized green.',
+            'Because they are uniquely designed to activate behind the windshield of a car by reacting to visible light.',
+            'Because they stay dark all the time and never clear up indoors.',
+            'Because they automatically adjust the car\'s window tint.'
+          ],
+          correctAnswerIndex: 1
+        },
+        {
+          id: 'gs-q7',
+          text: 'What is the primary benefit of the Transitions XTRActive Polarized lens for a patient who spends time on the water or driving in high-glare conditions?',
+          options: [
+            'It is a clear lens that only turns yellow in the sun.',
+            'It provides a static, dark tint that is always polarized even indoors.',
+            'It features dynamic polarization that activates outdoors to cut through blinding glare from reflective surfaces.',
+            'It makes the lenses 50% thinner than standard XTRActive.'
+          ],
+          correctAnswerIndex: 2
+        }
+      ]
+    },
   },
   {
     id: "lens-materials",

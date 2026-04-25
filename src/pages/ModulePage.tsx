@@ -85,16 +85,17 @@ export default function ModulePage() {
   };
 
   return (
-    <div className="space-y-8 lg:space-y-12 pb-20">
-      <button 
-        onClick={() => navigate('/')}
-        className="flex items-center gap-2 text-[10px] lg:text-[11px] font-bold text-text-muted hover:text-brand transition-all uppercase tracking-widest px-2"
-      >
+    <div className="min-h-screen w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+      <div className="max-w-7xl mx-auto space-y-8 lg:space-y-12 pb-20">
+        <button 
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2 text-[10px] lg:text-[11px] font-bold text-text-muted hover:text-brand transition-all uppercase tracking-widest"
+        >
         <ArrowLeft size={14} /> Back to Dashboard
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
-        <div className="lg:col-span-3 space-y-6 lg:space-y-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
+        <div className="lg:col-span-9 space-y-6 lg:space-y-10">
           <header className="px-2 lg:px-0">
             <div className="flex flex-wrap items-center gap-2 lg:gap-3 mb-4 lg:mb-6">
               <span className="px-2 py-0.5 bg-surface-hover text-[9px] lg:text-[10px] font-bold text-brand uppercase tracking-[0.2em] rounded-md border border-line">
@@ -284,29 +285,29 @@ export default function ModulePage() {
                     {module.quiz.questions.map((q, qIndex) => (
                       <div key={q.id} className="space-y-4 lg:space-y-6">
                         <div className="flex gap-3 lg:gap-4">
-                          <span className="text-text-secondary font-bold font-mono text-xs lg:text-sm">{String(qIndex + 1).padStart(2, '0')}.</span>
-                          <p className="text-base lg:text-lg font-bold text-text-primary leading-tight">{q.text}</p>
+                          <span className="text-text-secondary font-bold font-mono text-xs lg:text-sm shrink-0">{String(qIndex + 1).padStart(2, '0')}.</span>
+                          <p className="text-base lg:text-lg font-bold text-text-primary leading-tight break-words">{q.text}</p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 sm:ml-10">
+                        <div className="grid grid-cols-1 gap-3 lg:gap-4">
                           {q.options.map((option, aIndex) => (
                             <button
                               key={aIndex}
                               onClick={() => handleAnswerChange(qIndex, aIndex)}
                               className={cn(
-                                "p-3.5 lg:p-5 rounded-xl lg:rounded-2xl border text-left transition-all font-medium text-xs lg:text-sm",
+                                "w-full min-h-[60px] lg:min-h-[72px] p-3.5 lg:p-5 rounded-xl lg:rounded-2xl border text-left transition-all font-medium text-xs lg:text-sm flex items-start overflow-hidden",
                                 quizAnswers[qIndex] === aIndex 
                                   ? "bg-brand/10 border-brand text-brand ring-1 ring-brand"
                                   : "bg-surface-hover border-line text-text-muted hover:border-text-secondary/30"
                               )}
                             >
-                              <div className="flex items-center gap-2.5 lg:gap-3">
+                              <div className="flex items-start gap-2.5 lg:gap-3 w-full">
                                 <div className={cn(
-                                  "w-4 h-4 lg:w-5 lg:h-5 rounded-full border flex items-center justify-center shrink-0",
+                                  "w-4 h-4 lg:w-5 lg:h-5 rounded-full border flex items-center justify-center shrink-0 mt-0.5",
                                   quizAnswers[qIndex] === aIndex ? "border-brand" : "border-line"
                                 )}>
                                   {quizAnswers[qIndex] === aIndex && <div className="w-2 lg:w-2.5 h-2 lg:h-2.5 bg-brand rounded-full" />}
                                 </div>
-                                <span className="flex-1">{option}</span>
+                                <span className="flex-1 break-words leading-relaxed overflow-hidden text-ellipsis">{option}</span>
                               </div>
                             </button>
                           ))}
@@ -377,7 +378,7 @@ export default function ModulePage() {
           </AnimatePresence>
         </div>
 
-        <div className="space-y-6">
+        <div className="lg:col-span-3 space-y-6">
           <div className="lg:sticky lg:top-28 space-y-6">
             <div className="bg-surface-panel p-6 lg:p-8 rounded-[24px] lg:rounded-[32px] border border-line shadow-xl">
               <h3 className="text-[10px] font-bold text-text-secondary uppercase tracking-[0.2em] mb-6 lg:mb-8">Course Status</h3>
@@ -431,6 +432,7 @@ export default function ModulePage() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
