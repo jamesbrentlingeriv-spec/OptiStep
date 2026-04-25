@@ -928,61 +928,61 @@ export const INITIAL_MODULES: Module[] = [
     quiz: {
       questions: [
         {
-          id: 'vsp-q1',
+          id: "vsp-q1",
           text: "After logging into Eyefinity, which specific link must you click to begin the process of verifying a patient's VSP coverage?",
           options: [
-            'Submit a New Claim',
-            'Get Authorizations and Check Eligibility',
-            'Patient History Search',
-            'View Practice Reports'
+            "Submit a New Claim",
+            "Get Authorizations and Check Eligibility",
+            "Patient History Search",
+            "View Practice Reports",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'vsp-q2',
+          id: "vsp-q2",
           text: "When searching for a patient on the VSP Member Search page, what critical rule must you remember regarding spouses or children?",
           options: [
             "You should search using the dependent's name and social security number.",
             "You must use the primary member's information (SS# or Name/DOB) to find the policy.",
-            'Dependents must have their own separate Eyefinity login.',
-            "You only need the patient's phone number to pull the authorization."
+            "Dependents must have their own separate Eyefinity login.",
+            "You only need the patient's phone number to pull the authorization.",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'vsp-q3',
-          text: 'How do you finalize the authorization once you have selected the patient and their specific open benefits (like Frame and Lens)?',
+          id: "vsp-q3",
+          text: "How do you finalize the authorization once you have selected the patient and their specific open benefits (like Frame and Lens)?",
           options: [
             'Click the "Save for Later" button.',
             'Click the "Authorize" button to generate the claim numbers.',
-            'Email the patient their benefit summary.',
-            "Close the browser window and reopen it."
+            "Email the patient their benefit summary.",
+            "Close the browser window and reopen it.",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'vsp-q4',
+          id: "vsp-q4",
           text: "What is the name of the PDF that automatically pops up after you click authorize, and why is it important?",
           options: [
-            'The Lab Invoice; it tells you how much the frames cost.',
-            'The Doctors Report; it contains all the essential benefit information for the visit.',
-            'The Privacy Policy; it must be signed by the patient.',
-            "The Prescription Card; it shows the patient's current Rx."
+            "The Lab Invoice; it tells you how much the frames cost.",
+            "The Doctors Report; it contains all the essential benefit information for the visit.",
+            "The Privacy Policy; it must be signed by the patient.",
+            "The Prescription Card; it shows the patient's current Rx.",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'vsp-q5',
+          id: "vsp-q5",
           text: 'Where is the "Lens Enhancements" tab located, and what information does it provide for the patient?',
           options: [
-            'At the bottom of the home page; it lists all available frames.',
-            'Inside the frame display case; it shows the retail prices.',
+            "At the bottom of the home page; it lists all available frames.",
+            "Inside the frame display case; it shows the retail prices.",
             "At the top right of the printed Doctor's Report; it tells you the specific copays for add-ons like AR or transitions.",
-            "On the back of the patient's insurance card; it lists the doctor's phone number."
+            "On the back of the patient's insurance card; it lists the doctor's phone number.",
           ],
-          correctAnswerIndex: 2
-        }
-      ]
+          correctAnswerIndex: 2,
+        },
+      ],
     },
   },
 
@@ -1084,7 +1084,7 @@ export const INITIAL_MODULES: Module[] = [
   },
   {
     id: "transitions-gen-s",
-    title: "Transitions: All in One Eyeglasses",
+    title: "Transitions Gen S Technology",
     description: "The latest in photochromic lens technology.",
     content:
       "Understand the speed, color options, and performance metrics of the new Gen S lenses.",
@@ -1145,83 +1145,83 @@ export const INITIAL_MODULES: Module[] = [
     quiz: {
       questions: [
         {
-          id: 'gs-q1',
-          text: 'How does the speed of Transitions Gen S compare to previous generations like Gen 8?',
+          id: "gs-q1",
+          text: "How does the speed of Transitions Gen S compare to previous generations like Gen 8?",
           options: [
-            'It is slower to darken but reaches a darker level of tint.',
-            'It is the fastest darkening lens developed, reaching Category 3 darkness in seconds and returning to clear faster.',
-            'It has the exact same activation speed but comes in more colors.',
-            'It only reaches Category 1 darkness to ensure it stays clear.'
+            "It is slower to darken but reaches a darker level of tint.",
+            "It is the fastest darkening lens developed, reaching Category 3 darkness in seconds and returning to clear faster.",
+            "It has the exact same activation speed but comes in more colors.",
+            "It only reaches Category 1 darkness to ensure it stays clear.",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'gs-q2',
-          text: 'Which of the following lists the correct number of available colors and the newest addition to the Gen S lineup?',
+          id: "gs-q2",
+          text: "Which of the following lists the correct number of available colors and the newest addition to the Gen S lineup?",
           options: [
-            '6 colors; Emerald is the newest.',
-            '4 colors; Graphite Green is the newest.',
-            '8 colors; Ruby is the newest.',
-            '7 colors; Sapphire is the newest.'
+            "6 colors; Emerald is the newest.",
+            "4 colors; Graphite Green is the newest.",
+            "8 colors; Ruby is the newest.",
+            "7 colors; Sapphire is the newest.",
           ],
-          correctAnswerIndex: 2
+          correctAnswerIndex: 2,
         },
         {
-          id: 'gs-q3',
-          text: 'What type of light protection does Gen S provide for patients both indoors and outdoors?',
+          id: "gs-q3",
+          text: "What type of light protection does Gen S provide for patients both indoors and outdoors?",
           options: [
-            '100% UVA/UVB protection and harmful blue-violet light blocking.',
-            'Only UV protection; blue light blocking requires a separate coating.',
-            'Protection against infrared heat only.',
-            'Polarized glare protection in all lighting conditions.'
+            "100% UVA/UVB protection and harmful blue-violet light blocking.",
+            "Only UV protection; blue light blocking requires a separate coating.",
+            "Protection against infrared heat only.",
+            "Polarized glare protection in all lighting conditions.",
           ],
-          correctAnswerIndex: 0
+          correctAnswerIndex: 0,
         },
         {
-          id: 'gs-q4',
-          text: 'What aesthetic issue found in older photochromic lenses does Gen S eliminate when the wearer is indoors?',
+          id: "gs-q4",
+          text: "What aesthetic issue found in older photochromic lenses does Gen S eliminate when the wearer is indoors?",
           options: [
-            'The lenses becoming too thick.',
+            "The lenses becoming too thick.",
             'A yellow or gray "residual tint" that causes color distortion.',
-            'Lenses fogging up when moving between temperatures.',
-            'The anti-reflective coating peeling off.'
+            "Lenses fogging up when moving between temperatures.",
+            "The anti-reflective coating peeling off.",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'gs-q5',
+          id: "gs-q5",
           text: 'Why is Gen S specifically recommended for "active patients" who move between environments?',
           options: [
-            'Because the lenses are made of high-impact rubber.',
-            'Because they are only available in wrap-around sport frames.',
-            'Because they improve high-contrast vision during recovery, helping patients adapt to changing light seamlessly.',
-            'Because they never get dark enough to require removal.'
+            "Because the lenses are made of high-impact rubber.",
+            "Because they are only available in wrap-around sport frames.",
+            "Because they improve high-contrast vision during recovery, helping patients adapt to changing light seamlessly.",
+            "Because they never get dark enough to require removal.",
           ],
-          correctAnswerIndex: 2
+          correctAnswerIndex: 2,
         },
         {
-          id: 'gs-q6',
-          text: 'A patient mentions they are very light-sensitive while driving. Why is Transitions XTRActive the best recommendation for them?',
+          id: "gs-q6",
+          text: "A patient mentions they are very light-sensitive while driving. Why is Transitions XTRActive the best recommendation for them?",
           options: [
-            'Because they are the only lenses that turn a dark polarized green.',
-            'Because they are uniquely designed to activate behind the windshield of a car by reacting to visible light.',
-            'Because they stay dark all the time and never clear up indoors.',
-            'Because they automatically adjust the car\'s window tint.'
+            "Because they are the only lenses that turn a dark polarized green.",
+            "Because they are uniquely designed to activate behind the windshield of a car by reacting to visible light.",
+            "Because they stay dark all the time and never clear up indoors.",
+            "Because they automatically adjust the car's window tint.",
           ],
-          correctAnswerIndex: 1
+          correctAnswerIndex: 1,
         },
         {
-          id: 'gs-q7',
-          text: 'What is the primary benefit of the Transitions XTRActive Polarized lens for a patient who spends time on the water or driving in high-glare conditions?',
+          id: "gs-q7",
+          text: "What is the primary benefit of the Transitions XTRActive Polarized lens for a patient who spends time on the water or driving in high-glare conditions?",
           options: [
-            'It is a clear lens that only turns yellow in the sun.',
-            'It provides a static, dark tint that is always polarized even indoors.',
-            'It features dynamic polarization that activates outdoors to cut through blinding glare from reflective surfaces.',
-            'It makes the lenses 50% thinner than standard XTRActive.'
+            "It is a clear lens that only turns yellow in the sun.",
+            "It provides a static, dark tint that is always polarized even indoors.",
+            "It features dynamic polarization that activates outdoors to cut through blinding glare from reflective surfaces.",
+            "It makes the lenses 50% thinner than standard XTRActive.",
           ],
-          correctAnswerIndex: 2
-        }
-      ]
+          correctAnswerIndex: 2,
+        },
+      ],
     },
   },
   {
