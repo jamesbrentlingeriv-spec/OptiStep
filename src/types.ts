@@ -17,6 +17,12 @@ export interface Quiz {
   questions: Question[];
 }
 
+export type ModuleCategory = 
+  | "Clinical & Technical Proficiency"
+  | "Lens Technology & Products"
+  | "Patient Management & Sales"
+  | "Administrative & Compliance";
+
 export interface Module {
   id: string;
   title: string;
@@ -24,9 +30,10 @@ export interface Module {
   videoUrl?: string;
   content: string;
   order: number;
-  category: string;
+  category: ModuleCategory;
   slides: Slide[];
   quiz: Quiz;
+  logo?: string;
 }
 
 export interface UserProfile {

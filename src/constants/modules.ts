@@ -45,7 +45,7 @@ export const INITIAL_MODULES: Module[] = [
       "Mastering the art of troubleshooting is what separates great opticians from good ones.",
     videoUrl: "/slidevideos/trouble.mp4",
     order: 1,
-    category: "Clinical",
+    category: "Clinical & Technical Proficiency",
     slides: [
       {
         id: "ts1",
@@ -151,7 +151,7 @@ export const INITIAL_MODULES: Module[] = [
       "An optician must match the patient's visual needs with the correct optical architecture.",
     videoUrl: "/slidevideos/lensdesign.mp4",
     order: 2,
-    category: "Optical",
+    category: "Lens Technology & Products",
     slides: [
       {
         id: "lt1",
@@ -257,7 +257,7 @@ export const INITIAL_MODULES: Module[] = [
       'The "discovery" phase of the sale is where you identify the patient\'s true visual pain points.',
     videoUrl: "/slidevideos/lifestyle.mp4",
     order: 3,
-    category: "Sales",
+    category: "Patient Management & Sales",
     slides: [
       {
         id: "lc1",
@@ -364,7 +364,8 @@ export const INITIAL_MODULES: Module[] = [
       "Managing financial expectations while maintaining the professional value of custom medical devices.",
     videoUrl: "/slidevideos/policy.mp4",
     order: 2,
-    category: "Clinical",
+    category: "Patient Management & Sales",
+    logo: "/modulelogo/refund.png",
     slides: [
       {
         id: "ref1",
@@ -471,7 +472,7 @@ export const INITIAL_MODULES: Module[] = [
       "Superior customer service is what builds long-term loyalty in a competitive market.",
     videoUrl: "/slidevideos/customer.mp4",
     order: 4,
-    category: "Service",
+    category: "Patient Management & Sales",
     slides: [
       {
         id: "cs1",
@@ -520,7 +521,7 @@ export const INITIAL_MODULES: Module[] = [
       "Advanced administrative workflows for verifying eligibility, checking usage, and managing prior authorizations.",
     videoUrl: "/slidevideos/medicaid.mp4",
     order: 5,
-    category: "Administrative",
+    category: "Administrative & Compliance",
     slides: [
       {
         id: "km-1",
@@ -887,7 +888,7 @@ export const INITIAL_MODULES: Module[] = [
       "Advanced administrative workflows for verifying eligibility, checking usage, and managing prior authorizations.",
     videoUrl: "/slidevideos/vsp.mp4",
     order: 5,
-    category: "Administrative",
+    category: "Administrative & Compliance",
     slides: [
       {
         id: "vsp-1",
@@ -994,7 +995,7 @@ export const INITIAL_MODULES: Module[] = [
       "Determining the correct frame size is essential for optical performance and patient comfort.",
     videoUrl: "https://www.youtube.com/embed/frame-fitting",
     order: 5,
-    category: "Fitting",
+    category: "Clinical & Technical Proficiency",
     slides: [
       {
         id: "ff1",
@@ -1042,7 +1043,7 @@ export const INITIAL_MODULES: Module[] = [
       "Prism = dcm * Power. Mastering Prentice Rule is vital for avoiding unwanted prismatic effects.",
     videoUrl: "/slidevideos/prism.mp4",
     order: 6,
-    category: "Calculations",
+    category: "Clinical & Technical Proficiency",
     slides: [
       {
         id: "pr1",
@@ -1090,7 +1091,7 @@ export const INITIAL_MODULES: Module[] = [
       "Understand the speed, color options, and performance metrics of the new Gen S lenses.",
     videoUrl: "/slidevideos/transitions.mp4",
     order: 7,
-    category: "Lenses",
+    category: "Lens Technology & Products",
     slides: [
       {
         id: "gs1",
@@ -1232,7 +1233,7 @@ export const INITIAL_MODULES: Module[] = [
       "Selecting the right material involves balancing weight, clarity, thickness, and safety.",
     videoUrl: "https://www.youtube.com/embed/lens-materials",
     order: 8,
-    category: "Lenses",
+    category: "Lens Technology & Products",
     slides: [
       {
         id: "lm1",
@@ -1280,7 +1281,7 @@ export const INITIAL_MODULES: Module[] = [
       "Protecting patient privacy is non-negotiable. Learn the rules for handling PHI.",
     videoUrl: "https://www.youtube.com/embed/hipaa",
     order: 9,
-    category: "Legal",
+    category: "Administrative & Compliance",
     slides: [
       {
         id: "hi1",
@@ -1328,7 +1329,7 @@ export const INITIAL_MODULES: Module[] = [
       "The human eye is a complex organ. In this module, we explore the cornea, iris, pupil, lens, retina, and optic nerve.",
     videoUrl: "https://www.youtube.com/embed/eye-anatomy",
     order: 10,
-    category: "Anatomy",
+    category: "Clinical & Technical Proficiency",
     slides: [
       {
         id: "ea1",
